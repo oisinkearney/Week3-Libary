@@ -1,20 +1,26 @@
 ﻿using Libary;
+using Library;
 
-
-namespace Program
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
+        // Create a new instance (object) of the Book class
+        // Note how the object name differs from the class name
+        Book book = new Book("C# for beginners", "Bill Gates", "1234567");
+        Book book1 = new Book("Ultimate C#", "Microsoft", "2233445");
+        Console.WriteLine("Currently available books");
+        book.DisplayBookInfo();
+        book1.DisplayBookInfo();
 
-            Book book = new Book("C# for Beginners", "BillGates", "12345678");
-      
-            book.DisplayBookInfo();
+        // Create new instances of the Member class
+        // These new members are created using the
+        // Member constructor in the Members class
+        Member member = new Member(1, "John Smith", "1 High Street", 079009009);
+        Member member1 = new Member(2, "Mary Jones", "102 Garden Road", 0790345666);
 
-            Book book1 = new Book("C# Methods and Classes", "Microsoft", "55667788");
-
-            book1.DisplayBookInfo();
-        }
+        Console.WriteLine("Current library members");
+        member.DisplayInfo();
+        member1.DisplayInfo();
     }
 }
