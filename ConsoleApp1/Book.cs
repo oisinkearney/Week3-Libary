@@ -9,12 +9,16 @@ namespace Libary
         public string Title;
         public string Author;
         public string ISBN;
-    
-    public void DisplayBookInfo()
+
+        public Book(string bookTitle, string bookAuthor, string bookISBN)
         {
-            Console.WriteLine($"Title: {Title}");
-            Console.WriteLine($"Author: {Author}");
-            Console.WriteLine($"ISBN: {ISBN}");
+            this.Title = bookTitle;
+            this.Author = bookAuthor;
+            this.ISBN = bookISBN;
+        }
+        public void DisplayBookInfo()
+        {
+            Console.WriteLine($"Title: {Title}, Author: {Author}, ISBN: {ISBN}");
             Console.WriteLine();
         }
     }
